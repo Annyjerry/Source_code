@@ -47,7 +47,7 @@ left_col, right_col = st.columns([1, 1])
 with left_col:
     st.header("1. User Input")
     source_code = st.text_area("Enter Source Code here:", height=300, placeholder="Paste your code snippet...")
-    language = st.selectbox("Select Programming Language:", ["Python", "Java", "C++", "JavaScript", "Go"])
+    language = st.selectbox("Select Programming Language:", ["Python", "Java", "C++", "JavaScript", "C", "php"])
     
     analyze_btn = st.button("Analyze Code", type="primary")
 
