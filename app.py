@@ -17,8 +17,8 @@ st.set_page_config(page_title="Code Analyzer API", layout="wide")
 # --- Load Components ---
 @st.cache_resource
 def load_assets():
-    model = joblib.load('api_assets/nn_bert_tfidf_model.pkl')
-    vectorizer = joblib.load('api_assets/tfidf_vectorizer.pkl')
+    model = joblib.load('api_assets/Neural.joblib')
+    vectorizer = joblib.load('api_assets/tfidf_vectorizer.joblib')
     tokenizer = AutoTokenizer.from_pretrained("microsoft/codebert-base")
     bert_model = AutoModel.from_pretrained("microsoft/codebert-base")
     return model, vectorizer, tokenizer, bert_model
