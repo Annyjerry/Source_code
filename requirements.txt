@@ -1,0 +1,5 @@
+streamlit
+joblib
+torch
+transformers
+scikit-learn
