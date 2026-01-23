@@ -22,8 +22,8 @@ st.set_page_config(page_title="Code Analyzer API", layout="wide")
 # Ensure the keys (Low, Medium, etc.) match exactly what your model outputs
 SEVERITY_KNOWLEDGE_BASE = {
     0: {
-        "description": "The code contains minor stylistic issues or non-optimal patterns that do not immediately threaten security.",
-        "recommendation": "Review naming conventions, remove dead code, and ensure comments are up to date. No urgent security patch required."
+        "description": "Safe code.",
+        "recommendation": "N/A"
     },
     1: {
         "description": "Potential logical vulnerabilities detected. These could lead to unexpected behavior or information leakage under specific edge cases.",
