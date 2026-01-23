@@ -21,19 +21,19 @@ st.set_page_config(page_title="Code Analyzer API", layout="wide")
 # --- 2. Knowledge Base Definition ---
 # Ensure the keys (Low, Medium, etc.) match exactly what your model outputs
 SEVERITY_KNOWLEDGE_BASE = {
-    "Low": {
+    "Class D": {
         "description": "The code contains minor stylistic issues or non-optimal patterns that do not immediately threaten security.",
         "recommendation": "Review naming conventions, remove dead code, and ensure comments are up to date. No urgent security patch required."
     },
-    "Mild": {
+    "Class A": {
         "description": "Potential logical vulnerabilities detected. These could lead to unexpected behavior or information leakage under specific edge cases.",
         "recommendation": "Improve error handling and ensure all input variables are typed correctly. Add unit tests for boundary conditions."
     },
-    "Mild": {
+    "Class B": {
         "description": "Significant security risks identified. Patterns found are common in memory leaks, unauthorized access, or logic flaws.",
         "recommendation": "Implement strict input sanitization. Avoid using deprecated functions. Conduct a manual code review of the affected logic."
     },
-    "High": {
+    "Class C": {
         "description": "Dangerous patterns detected (e.g., potential SQL Injection, Buffer Overflow, or Hardcoded Credentials).",
         "recommendation": "IMMEDIATE ACTION: Use parameterized queries, implement robust authentication, and use secure memory-safe libraries."
     }
