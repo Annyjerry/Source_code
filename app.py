@@ -18,8 +18,7 @@ except Exception:
 # Set page to wide mode to fit two sections on one screen
 st.set_page_config(page_title="Code Analyzer API", layout="wide")
 
-# --- 2. Knowledge Base Definition ---
-# Ensure the keys (Low, Medium, etc.) match exactly what your model outputs
+# --- 2. Knowledge Base Definition
 SEVERITY_KNOWLEDGE_BASE = {
     0: {
         "description": "Safe code.",
@@ -39,7 +38,7 @@ SEVERITY_KNOWLEDGE_BASE = {
     }
 }
 
-# --- 3. Load Components ---
+# --- 3. Load Components 
 @st.cache_resource
 def load_assets():
     # Paths based on your previous messages
@@ -51,7 +50,7 @@ def load_assets():
 
 nn_model, tfidf_vec, tokenizer, bert_model = load_assets()
 
-# --- 4. Helper: Feature Extraction ---
+# --- 4. Helper: Feature Extraction
 def get_embeddings(text):
     inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True, max_length=512)
     with torch.no_grad():
@@ -62,8 +61,8 @@ def is_valid_code(text):
     code_indicators = ['def ', 'import ', '{', '}', ';', 'func ', 'var ', 'public ', 'class ', 'print(']
     return any(indicator in text for indicator in code_indicators) or len(text.split()) > 3
 
-# --- 5. UI Layout ---
-st.title("🛡️ Source Code Vulnerability Severity Analyzer")
+# --- 5. UI Layout
+st.title("⚡ Source Code Vulnerability Severity Analyzer")
 st.markdown("---")
 
 left_col, right_col = st.columns([1, 1])
