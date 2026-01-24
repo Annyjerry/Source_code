@@ -1,5 +1,12 @@
-streamlit
+# Core Utilities
+numpy
+pandas
 joblib
+
+# Machine Learning & NLP
+scikit-learn
 torch
 transformers
-scikit-learn
+
+# Web Interface
+streamlit
