@@ -23,9 +23,24 @@ The underlying engine uses a **Feature Fusion** technique:
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/Annyjerry/source-code-analyzer.git](https://github.com/your-username/source-code-analyzer.git)
+git clone [https://github.com/Annyjerry/source-code-analyzer.git](https://github.com/your-username/source_code.git)
 cd source-code-analyzer
 
-## Install Dependencies
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
+
+### 3. Configure Model Assets
+Ensure your trained model files are placed in the api_assets folder:
+
+1. api_assets/Neural.joblib
+
+2. api_assets/tfidf_vectorizer.joblib
+
+## Usage
+To launch the web interface, run the following command in your terminal:
+
+```Bash
+
+streamlit run app.py
+
